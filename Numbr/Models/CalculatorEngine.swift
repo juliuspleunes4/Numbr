@@ -1,9 +1,8 @@
 /*
-@file       : NumbrApp.swift
+@file       : CalculatorEngine.swift
 @project    : Numbr
-@brief      : Calculator app for iPadOS
-@details    : This app tries to mimick the official iOS calculator app
-              as well as possible.
+@brief      : Core logic for expression evaluation
+@details    : Evaluates simple math expressions using NSExpression
 @date       : 04-06-2025
 @author     : J. Pleunes
  
@@ -32,14 +31,21 @@
 */
 
 // Importing the necessary modules
-import SwiftUI
+import Foundation
 
-// @main - Starting point of the app
-@main
-struct NumbrApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
+struct CalculatorEngine {
+    /*
+     @function  : evaluate
+     @brief     : Evaluates a string-based math expression
+     @param     : expression - The math expression as a String
+     @return    : Result as a string, or "Error" if invalid
+     */
+    static func evaluate(expression: String) -> String {
+        let expr = NSExpression(format: expression)
+        if let result = expr.expressionValue(with: nil, context: nil) as? NSNumber {
+            return String(describing: result)
+        } else {
+            return "Error"
         }
     }
 }

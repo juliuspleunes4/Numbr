@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC71EECD2DF0C5F50050EDA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC71EECC2DF0C5F50050EDA7 /* Assets.xcassets */; };
 		CC71EEF82DF0C9C90050EDA7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CC71EEF72DF0C9C90050EDA7 /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -28,9 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CC71EEC52DF0C5E90050EDA7 /* Numbr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Numbr.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC71EED52DF0C5F70050EDA7 /* NumbrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumbrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC71EEDF2DF0C5F70050EDA7 /* NumbrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumbrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC71EEC52DF0C5E90050EDA7 /* Numbr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Numbr.app; path = "/Users/juliuspleunes/Desktop/Numbr/build/Debug-iphoneos/Numbr.app"; sourceTree = "<absolute>"; };
+		CC71EECC2DF0C5F50050EDA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC71EED52DF0C5F70050EDA7 /* NumbrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = NumbrTests.xctest; path = "/Users/juliuspleunes/Desktop/Numbr/build/Debug-iphoneos/Numbr.app/PlugIns/NumbrTests.xctest"; sourceTree = "<absolute>"; };
+		CC71EEDF2DF0C5F70050EDA7 /* NumbrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = NumbrUITests.xctest; path = "/Users/juliuspleunes/Desktop/Numbr/build/Debug-iphoneos/NumbrUITests-Runner.app/PlugIns/NumbrUITests.xctest"; sourceTree = "<absolute>"; };
 		CC71EEF72DF0C9C90050EDA7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -38,6 +40,11 @@
 		CC71EEC72DF0C5E90050EDA7 /* Numbr */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Numbr;
+			sourceTree = "<group>";
+		};
+		CC71EEFD2DF0CDC20050EDA7 /* Preview Content */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -71,19 +78,18 @@
 			isa = PBXGroup;
 			children = (
 				CC71EEC72DF0C5E90050EDA7 /* Numbr */,
-				CC71EEC62DF0C5E90050EDA7 /* Products */,
 				CC71EEF72DF0C9C90050EDA7 /* README.md */,
+				CC71EEFB2DF0CDB40050EDA7 /* Content */,
 			);
 			sourceTree = "<group>";
 		};
-		CC71EEC62DF0C5E90050EDA7 /* Products */ = {
+		CC71EEFB2DF0CDB40050EDA7 /* Content */ = {
 			isa = PBXGroup;
 			children = (
-				CC71EEC52DF0C5E90050EDA7 /* Numbr.app */,
-				CC71EED52DF0C5F70050EDA7 /* NumbrTests.xctest */,
-				CC71EEDF2DF0C5F70050EDA7 /* NumbrUITests.xctest */,
+				CC71EECC2DF0C5F50050EDA7 /* Assets.xcassets */,
+				CC71EEFD2DF0CDC20050EDA7 /* Preview Content */,
 			);
-			name = Products;
+			path = Content;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,6 +109,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				CC71EEC72DF0C5E90050EDA7 /* Numbr */,
+				CC71EEFD2DF0CDC20050EDA7 /* Preview Content */,
 			);
 			name = Numbr;
 			packageProductDependencies = (
@@ -184,7 +191,7 @@
 			mainGroup = CC71EEBC2DF0C5E80050EDA7;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = CC71EEC62DF0C5E90050EDA7 /* Products */;
+			productRefGroup = CC71EEBC2DF0C5E80050EDA7;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -201,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC71EEF82DF0C9C90050EDA7 /* README.md in Resources */,
+				CC71EECD2DF0C5F50050EDA7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
