@@ -41,7 +41,7 @@ struct PortraitLayout: View {
         ["7", "8", "9", "×"],
         ["4", "5", "6", "-"],
         ["1", "2", "3", "+"],
-        ["0", ".", "=", ""]
+        ["calc", "0", ".", "="]
     ]
 
     var body: some View {
@@ -52,13 +52,27 @@ struct PortraitLayout: View {
                         if symbol.isEmpty {
                             Spacer().frame(width: 80)
                         } else {
-                            CalculatorButton(
-                                label: symbol,
-                                background: background(for: symbol),
-                                foreground: foreground(for: symbol)
-                            ) {
-                                handle(symbol)
+                            /* MARK: TODO: FIX CALCULATOR BUTTON */
+                            if symbol == "calc" {
+                                Button(action: {
+                                }) {
+                                    Image(systemName: "calculator")
+                                        .font(.system(size: 26, weight: .regular))
+                                        .foregroundColor(.black)
+                                        .frame(width: 80, height: 80)
+                                        .background(Theme.lightGray)
+                                        .clipShape(Circle())
+                                }
+                            } else {
+                                CalculatorButton(
+                                    label: symbol,
+                                    background: background(for: symbol),
+                                    foreground: foreground(for: symbol)
+                                ) {
+                                    handle(symbol)
+                                }
                             }
+
                         }
                     }
                 }
