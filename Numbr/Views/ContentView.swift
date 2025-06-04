@@ -34,37 +34,41 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.horizontalSizeClass) var hSize
     @State private var input: String = ""
     @State private var output: String = ""
 
     var body: some View {
-        VStack(spacing: 20) {
-            Spacer()
+        GeometryReader { geo in
+            VStack(spacing: 16) {
+                Spacer()
 
-            VStack(alignment: .trailing, spacing: 10) {
-                Text(input)
-                    .font(.system(size: 40, weight: .medium, design: .rounded))
-                    .foregroundColor(.primary)
-                    .lineLimit(2)
-                    .frame(maxWidth: .infinity, alignment: .trailing)
+                VStack(alignment: .trailing, spacing: 10) {
+                    Text(input)
+                        .font(.system(size: 32, weight: .light))
+                        .foregroundColor(.gray)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
 
-                Text(output)
-                    .font(.system(size: 50, weight: .bold, design: .rounded))
-                    .foregroundColor(.accentColor)
-                    .lineLimit(1)
-                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    Text(output)
+                        .font(.system(size: 60, weight: .regular))
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                }
+                .padding()
+                .background(.ultraThinMaterial)
+                .cornerRadius(20)
+                .padding(.horizontal)
+
+                if geo.size.width > geo.size.height {
+                    LandscapeLayout(input: $input, output: $output)
+                } else {
+                    PortraitLayout(input: $input, output: $output)
+                }
+
+                Spacer()
             }
             .padding()
-            .background(.ultraThinMaterial)
-            .cornerRadius(20)
-            .padding(.horizontal)
-
-            ButtonGrid(input: $input, output: $output)
-
-            Spacer(minLength: 40)
+            .background(Theme.background.ignoresSafeArea())
         }
-        .padding()
-        .background(Color(UIColor.systemGroupedBackground))
     }
 }
-
