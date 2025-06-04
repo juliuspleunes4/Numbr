@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CC71EEF82DF0C9C90050EDA7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CC71EEF72DF0C9C90050EDA7 /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		CC71EED62DF0C5F70050EDA7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		CC71EEC52DF0C5E90050EDA7 /* Numbr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Numbr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC71EED52DF0C5F70050EDA7 /* NumbrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumbrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC71EEDF2DF0C5F70050EDA7 /* NumbrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumbrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC71EEF72DF0C9C90050EDA7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -67,6 +72,7 @@
 			children = (
 				CC71EEC72DF0C5E90050EDA7 /* Numbr */,
 				CC71EEC62DF0C5E90050EDA7 /* Products */,
+				CC71EEF72DF0C9C90050EDA7 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC71EEF82DF0C9C90050EDA7 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
